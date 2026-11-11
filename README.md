@@ -156,7 +156,25 @@ WHERE a.exchange = 'bybit' AND b.exchange = 'binance' AND symbol = 'BTC' AND a.f
 
 ## Скриншоты
 
-_Добавить после недели работы на реальных данных: алерт, утренняя сводка, дашборд._
+**Signals: лучшая пара бирж для funding carry после комиссий**
+
+![Signals: лучшая пара бирж для funding carry после комиссий](docs/signals.png)
+
+**Обзор: funding по биржам и spread по часам суток**
+
+![Обзор: funding по биржам и spread по часам суток](docs/overview.png)
+
+**Обзор: open interest и цена, корреляции, состояние коллекторов**
+
+![Обзор: open interest и цена, корреляции, состояние коллекторов](docs/overview2.png)
+
+**Команды бота**
+
+![Команды бота](docs/telegram-commands.png)
+
+**/status: здоровье девяти коллекторов**
+
+![/status: здоровье девяти коллекторов](docs/status.png)
 
 ## Ограничения
 
