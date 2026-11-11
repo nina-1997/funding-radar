@@ -168,6 +168,10 @@ WHERE a.exchange = 'bybit' AND b.exchange = 'binance' AND symbol = 'BTC' AND a.f
 
 ![Обзор: open interest и цена, корреляции, состояние коллекторов](docs/overview2.png)
 
+**Алерт в Telegram**
+
+![Алерт в Telegram](docs/telegram-alert.png)
+
 **Команды бота**
 
 ![Команды бота](docs/telegram-commands.png)
