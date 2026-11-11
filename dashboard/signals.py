@@ -78,7 +78,8 @@ def table() -> None:
         "Шорт": [f"{name(e)} {v:+.1f}%" for e, v in zip(df.short_ex, df.short_annual_pct)],
         "Фандинг через": [("⏰ " if soon else "") + countdown(m) for m, soon in zip(df.minutes_to_funding, df.funding_soon)],
         "Устойч., ч": df.stability_h,
-        "ΔOI 24ч, %": pd.to_numeric(df.oi_24h_short_pct, errors="coerce"),   # None -> NaN, иначе в таблице «None»
+        # Streamlit показывает пустые числа как «None» и игнорирует na_rep, поэтому колонку отдаём строками
+        "ΔOI 24ч, %": ["—" if v is None or v != v else f"{v:+.1f}" for v in df.oi_24h_short_pct],
         "Gross %": df.gross_pct,
         "Издержки, bp": df.cost_bps,
         "Спред, bp/8ч": df.spread_bp_8h,
@@ -87,7 +88,7 @@ def table() -> None:
     })
     styled = (view.style
               .format({"Спред, bp/8ч": "{:.2f}", "Gross %": "{:.1f}", "Издержки, bp": "{:.0f}",
-                       "Нетто % год.": "{:.1f}", "Устойч., ч": "{:.1f}", "ΔOI 24ч, %": "{:+.1f}"}, na_rep="—")
+                       "Нетто % год.": "{:.1f}", "Устойч., ч": "{:.1f}"}, na_rep="—")
               .background_gradient(subset=["Нетто % год."], cmap="Greens")
               .set_properties(subset=["Нетто % год."], **{"font-weight": "bold"}))
     col = st.column_config
