@@ -1,0 +1,76 @@
+# Funding Radar — единственный файл настроек. Секреты (токены) лежат в .env, не здесь.
+
+symbols: [BTC, ETH, SOL, XRP, DOGE, BNB, ADA, AVAX]
+quote: USDT
+
+exchanges:
+  binance:
+    enabled: true
+    base_url: https://fapi.binance.com
+    min_interval_s: 0.10      # пауза между запросами (лимит ~1200 веса/мин)
+  bybit:
+    enabled: true
+    base_url: https://api.bybit.com
+    min_interval_s: 0.05      # лимит ~120 запросов / 5 с
+  okx:
+    enabled: true
+    base_url: https://www.okx.com
+    min_interval_s: 0.12      # лимит ~20 запросов / 2 с на эндпоинт
+
+http:
+  timeout_s: 10
+  max_retries: 4              # сколько раз повторяем после 429 / 5xx / таймаута
+  backoff_base_s: 1.0         # 1, 2, 4, 8 секунд
+
+paths:
+  db: data/funding_radar.duckdb
+  raw: raw
+  logs: logs
+
+schedule:
+  funding_every_min: 5        # funding + mark price + свечи + аналитика + алерты
+  oi_minute: 1                # open interest: каждый час в :01
+  digest_time: "09:00"
+  timezone: Europe/Lisbon
+
+klines:
+  interval_min: 5
+  initial_limit: 288          # сколько свечей брать при первом запуске (24 ч)
+
+alerts:
+  spread_bp: 1.5              # порог расхождения funding между биржами, б.п. за 8 ч
+  spread_min_duration_min: 15 # алерт уходит, только если spread держится столько минут
+  volume_zscore: 4.0          # всплеск объёма 5-мин свечи к среднему за 24 ч
+  oi_change_1h_pct: 5.0       # |ΔOI| за час
+  stale_after_min: 15         # если данные старше — состояние эпизодов не трогаем
+
+regime:
+  long_overheat_funding: 0.0003    # средний funding за 8 ч >= 0.03 %
+  short_overheat_funding: -0.0001  # средний funding за 8 ч <= -0.01 %
+  divergence_corr: 0.5             # средняя парная корреляция ниже — «разъезд»
+  corr_window_days: 7
+
+ai:
+  enabled: true
+  model: claude-haiku-5-5     # проверь актуальные модели и цены: https://docs.claude.com
+  max_tokens: 700
+  price_in_per_mtok: 1.0      # $ за 1 млн входных токенов — впиши цену своей модели
+  price_out_per_mtok: 5.0     # $ за 1 млн выходных токенов
+  daily_budget_usd: 0.40      # при превышении AI-часть отключается до завтра
+  explain_in_alerts: true
+
+carry:                        # экран Signals и carry-алерты (funding-арбитраж: лонг дешёвой ноги / шорт дорогой)
+  fees_bps:                   # комиссии в б.п. (0.05 % = 5 б.п.), базовый уровень без VIP. Сверь на сайтах бирж!
+    binance: {taker: 5.0, maker: 2.0}
+    bybit:   {taker: 5.5, maker: 2.0}
+    okx:     {taker: 5.0, maker: 2.0}
+  slippage_buffer_bps: 3.0    # запас на проскальзывание на весь round-trip
+  holding_days: 7             # горизонт удержания по умолчанию
+  min_net_pct: 0.0            # порог нетто-carry, % годовых: ниже — не показываем
+  min_oi_usd: 0               # минимальный OI на каждой ноге, $ (0 = без фильтра)
+  time_to_funding_buffer_min: 15   # ближайший фандинг раньше — бейдж «можно не успеть»
+  freshness_min: 15           # данные старше — «стухли»
+  max_gap_min: 20             # дыра в истории больше этого рвёт «устойчивость»
+  alert_threshold_pct: 15.0   # алерт: нетто-carry выше этого, % годовых...
+  alert_min_stability_h: 2.0  # ...и держится не меньше стольких часов
+  alert_cooldown_h: 2.0       # один и тот же сигнал не чаще раза в cooldown

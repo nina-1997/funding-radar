@@ -1,0 +1,55 @@
+{
+ "exchange": "okx",
+ "kind": "oi",
+ "fetched_at_ms": 1794409225000,
+ "responses": {
+  "open-interest": {
+   "code": "0",
+   "msg": "",
+   "data": [
+    {
+     "instId": "BTC-USDT-SWAP",
+     "instType": "SWAP",
+     "oi": "2950000",
+     "oiCcy": "29500",
+     "oiUsd": "3021000000",
+     "ts": "1794409220000"
+    },
+    {
+     "instId": "ETH-USDT-SWAP",
+     "instType": "SWAP",
+     "oi": "4100000",
+     "oiCcy": "410000",
+     "oiUsd": "",
+     "ts": "1794409220000"
+    },
+    {
+     "instId": "BTC-USD-SWAP",
+     "instType": "SWAP",
+     "oi": "5000000",
+     "oiCcy": "4880",
+     "oiUsd": "500000000",
+     "ts": "1794409220000"
+    }
+   ]
+  },
+  "mark-price": {
+   "code": "0",
+   "msg": "",
+   "data": [
+    {
+     "instId": "BTC-USDT-SWAP",
+     "instType": "SWAP",
+     "markPx": "102408.3",
+     "ts": "1794409200000"
+    },
+    {
+     "instId": "ETH-USDT-SWAP",
+     "instType": "SWAP",
+     "markPx": "3860.11",
+     "ts": "1794409200000"
+    }
+   ]
+  }
+ }
+}

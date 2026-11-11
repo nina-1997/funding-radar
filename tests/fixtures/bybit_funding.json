@@ -1,0 +1,187 @@
+{
+ "exchange": "bybit",
+ "kind": "funding",
+ "fetched_at_ms": 1794409225000,
+ "responses": {
+  "tickers": {
+   "retCode": 0,
+   "retMsg": "OK",
+   "result": {
+    "category": "linear",
+    "list": [
+     {
+      "symbol": "BTCUSDT",
+      "lastPrice": "102415.50",
+      "indexPrice": "102399.10",
+      "markPrice": "102415.50",
+      "prevPrice24h": "102415.50",
+      "price24hPcnt": "0.0182",
+      "highPrice24h": "102415.50",
+      "lowPrice24h": "102415.50",
+      "prevPrice1h": "102415.50",
+      "openInterest": "61200.512",
+      "openInterestValue": "6267000000.00",
+      "turnover24h": "5000000000",
+      "volume24h": "50000",
+      "fundingRate": "0.000312",
+      "nextFundingTime": "1794412800000",
+      "predictedDeliveryPrice": "",
+      "basisRate": "",
+      "deliveryFeeRate": "",
+      "deliveryTime": "0",
+      "ask1Size": "1.2",
+      "bid1Price": "102415.50",
+      "ask1Price": "102415.50",
+      "bid1Size": "0.9",
+      "basis": "",
+      "fundingIntervalHour": "8"
+     },
+     {
+      "symbol": "ETHUSDT",
+      "lastPrice": "3860.80",
+      "indexPrice": "3859.95",
+      "markPrice": "3860.80",
+      "prevPrice24h": "3860.80",
+      "price24hPcnt": "0.0182",
+      "highPrice24h": "3860.80",
+      "lowPrice24h": "3860.80",
+      "prevPrice1h": "3860.80",
+      "openInterest": "1500000.25",
+      "openInterestValue": "5791000000.00",
+      "turnover24h": "5000000000",
+      "volume24h": "50000",
+      "fundingRate": "0.0001",
+      "nextFundingTime": "1794412800000",
+      "predictedDeliveryPrice": "",
+      "basisRate": "",
+      "deliveryFeeRate": "",
+      "deliveryTime": "0",
+      "ask1Size": "1.2",
+      "bid1Price": "3860.80",
+      "ask1Price": "3860.80",
+      "bid1Size": "0.9",
+      "basis": ""
+     },
+     {
+      "symbol": "SOLUSDT",
+      "lastPrice": "182.450",
+      "indexPrice": "182.400",
+      "markPrice": "182.450",
+      "prevPrice24h": "182.450",
+      "price24hPcnt": "0.0182",
+      "highPrice24h": "182.450",
+      "lowPrice24h": "182.450",
+      "prevPrice1h": "182.450",
+      "openInterest": "21000000.5",
+      "openInterestValue": "3831000000.00",
+      "turnover24h": "5000000000",
+      "volume24h": "50000",
+      "fundingRate": "0.00004",
+      "nextFundingTime": "1794412800000",
+      "predictedDeliveryPrice": "",
+      "basisRate": "",
+      "deliveryFeeRate": "",
+      "deliveryTime": "0",
+      "ask1Size": "1.2",
+      "bid1Price": "182.450",
+      "ask1Price": "182.450",
+      "bid1Size": "0.9",
+      "basis": "",
+      "fundingIntervalHour": "4"
+     },
+     {
+      "symbol": "BTCPERP",
+      "lastPrice": "102300.00",
+      "indexPrice": "102399.10",
+      "markPrice": "102300.00",
+      "prevPrice24h": "102300.00",
+      "price24hPcnt": "0.0182",
+      "highPrice24h": "102300.00",
+      "lowPrice24h": "102300.00",
+      "prevPrice1h": "102300.00",
+      "openInterest": "1000",
+      "openInterestValue": "102300000",
+      "turnover24h": "5000000000",
+      "volume24h": "50000",
+      "fundingRate": "0.0001",
+      "nextFundingTime": "1794412800000",
+      "predictedDeliveryPrice": "",
+      "basisRate": "",
+      "deliveryFeeRate": "",
+      "deliveryTime": "0",
+      "ask1Size": "1.2",
+      "bid1Price": "102300.00",
+      "ask1Price": "102300.00",
+      "bid1Size": "0.9",
+      "basis": "",
+      "fundingIntervalHour": "8"
+     }
+    ]
+   },
+   "retExtInfo": {},
+   "time": 1794409223000
+  },
+  "instruments": {
+   "BTCUSDT": {
+    "retCode": 0,
+    "retMsg": "OK",
+    "result": {
+     "category": "linear",
+     "list": [
+      {
+       "symbol": "BTCUSDT",
+       "contractType": "LinearPerpetual",
+       "status": "Trading",
+       "baseCoin": "BTC",
+       "quoteCoin": "USDT",
+       "fundingInterval": 480
+      }
+     ],
+     "nextPageCursor": ""
+    },
+    "retExtInfo": {},
+    "time": 1794409200000
+   },
+   "ETHUSDT": {
+    "retCode": 0,
+    "retMsg": "OK",
+    "result": {
+     "category": "linear",
+     "list": [
+      {
+       "symbol": "ETHUSDT",
+       "contractType": "LinearPerpetual",
+       "status": "Trading",
+       "baseCoin": "ETH",
+       "quoteCoin": "USDT",
+       "fundingInterval": 480
+      }
+     ],
+     "nextPageCursor": ""
+    },
+    "retExtInfo": {},
+    "time": 1794409200000
+   },
+   "SOLUSDT": {
+    "retCode": 0,
+    "retMsg": "OK",
+    "result": {
+     "category": "linear",
+     "list": [
+      {
+       "symbol": "SOLUSDT",
+       "contractType": "LinearPerpetual",
+       "status": "Trading",
+       "baseCoin": "SOL",
+       "quoteCoin": "USDT",
+       "fundingInterval": 240
+      }
+     ],
+     "nextPageCursor": ""
+    },
+    "retExtInfo": {},
+    "time": 1794409200000
+   }
+  }
+ }
+}

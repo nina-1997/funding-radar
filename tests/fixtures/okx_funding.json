@@ -1,0 +1,131 @@
+{
+ "exchange": "okx",
+ "kind": "funding",
+ "fetched_at_ms": 1794409225000,
+ "responses": {
+  "funding-rate": {
+   "BTC-USDT-SWAP": {
+    "code": "0",
+    "msg": "",
+    "data": [
+     {
+      "instId": "BTC-USDT-SWAP",
+      "instType": "SWAP",
+      "fundingRate": "0.000098",
+      "fundingTime": "1794412800000",
+      "nextFundingRate": "",
+      "nextFundingTime": "1794441600000",
+      "minFundingRate": "-0.00375",
+      "maxFundingRate": "0.00375",
+      "settState": "settled",
+      "settFundingRate": "0.0000912",
+      "premium": "0.00012",
+      "method": "current_period",
+      "formulaType": "withRate",
+      "ts": "1794409220000"
+     }
+    ]
+   },
+   "ETH-USDT-SWAP": {
+    "code": "0",
+    "msg": "",
+    "data": [
+     {
+      "instId": "ETH-USDT-SWAP",
+      "instType": "SWAP",
+      "fundingRate": "0.0000791",
+      "fundingTime": "1794412800000",
+      "nextFundingRate": "",
+      "nextFundingTime": "1794441600000",
+      "minFundingRate": "-0.00375",
+      "maxFundingRate": "0.00375",
+      "settState": "settled",
+      "settFundingRate": "0.0000912",
+      "premium": "0.00012",
+      "method": "current_period",
+      "formulaType": "withRate",
+      "ts": "1794409220000"
+     }
+    ]
+   },
+   "SOL-USDT-SWAP": {
+    "code": "0",
+    "msg": "",
+    "data": [
+     {
+      "instId": "SOL-USDT-SWAP",
+      "instType": "SWAP",
+      "fundingRate": "0.00003",
+      "fundingTime": "1794412800000",
+      "nextFundingRate": "",
+      "nextFundingTime": "1794427200000",
+      "minFundingRate": "-0.00375",
+      "maxFundingRate": "0.00375",
+      "settState": "settled",
+      "settFundingRate": "0.0000912",
+      "premium": "0.00012",
+      "method": "current_period",
+      "formulaType": "withRate",
+      "ts": "1794409220000"
+     }
+    ]
+   }
+  },
+  "mark-price": {
+   "code": "0",
+   "msg": "",
+   "data": [
+    {
+     "instId": "BTC-USDT-SWAP",
+     "instType": "SWAP",
+     "markPx": "102408.3",
+     "ts": "1794409220000"
+    },
+    {
+     "instId": "ETH-USDT-SWAP",
+     "instType": "SWAP",
+     "markPx": "3860.11",
+     "ts": "1794409220000"
+    },
+    {
+     "instId": "SOL-USDT-SWAP",
+     "instType": "SWAP",
+     "markPx": "182.43",
+     "ts": "1794409220000"
+    },
+    {
+     "instId": "BTC-USD-SWAP",
+     "instType": "SWAP",
+     "markPx": "102400.1",
+     "ts": "1794409220000"
+    }
+   ]
+  },
+  "index-tickers": {
+   "code": "0",
+   "msg": "",
+   "data": [
+    {
+     "instId": "BTC-USDT",
+     "idxPx": "102397.9",
+     "high24h": "103000",
+     "sodUtc0": "101000",
+     "open24h": "100600",
+     "low24h": "100100",
+     "sodUtc8": "101500",
+     "ts": "1794409220000"
+    },
+    {
+     "instId": "ETH-USDT",
+     "idxPx": "3859.7",
+     "high24h": "3900",
+     "sodUtc0": "3800",
+     "open24h": "3744",
+     "low24h": "3700",
+     "sodUtc8": "3810",
+     "ts": "1794409220000"
+    }
+   ]
+  }
+ }
+}

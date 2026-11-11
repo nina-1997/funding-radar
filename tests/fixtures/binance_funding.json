@@ -1,0 +1,68 @@
+{
+ "exchange": "binance",
+ "kind": "funding",
+ "fetched_at_ms": 1794409225000,
+ "responses": {
+  "premiumIndex": [
+   {
+    "symbol": "BTCUSDT",
+    "markPrice": "102410.10000000",
+    "indexPrice": "102398.52000000",
+    "estimatedSettlePrice": "102400.00000000",
+    "lastFundingRate": "0.00010000",
+    "interestRate": "0.00010000",
+    "nextFundingTime": 1794412800000,
+    "time": 1794409221000
+   },
+   {
+    "symbol": "ETHUSDT",
+    "markPrice": "3860.25000000",
+    "indexPrice": "3859.90000000",
+    "estimatedSettlePrice": "3860.00000000",
+    "lastFundingRate": "0.00008200",
+    "interestRate": "0.00010000",
+    "nextFundingTime": 1794412800000,
+    "time": 1794409221000
+   },
+   {
+    "symbol": "SOLUSDT",
+    "markPrice": "182.4400",
+    "indexPrice": "182.4000",
+    "estimatedSettlePrice": "182.41",
+    "lastFundingRate": "0.00005000",
+    "interestRate": "0.00005000",
+    "nextFundingTime": 1794412800000,
+    "time": 1794409221000
+   },
+   {
+    "symbol": "BTCUSDC",
+    "markPrice": "102400.0",
+    "indexPrice": "102398.5",
+    "estimatedSettlePrice": "102400.0",
+    "lastFundingRate": "0.00007000",
+    "interestRate": "0.00010000",
+    "nextFundingTime": 1794412800000,
+    "time": 1794409221000
+   },
+   {
+    "symbol": "BTCUSDT_261225",
+    "markPrice": "104000.0",
+    "indexPrice": "102398.5",
+    "estimatedSettlePrice": "0",
+    "lastFundingRate": "",
+    "interestRate": "",
+    "nextFundingTime": 0,
+    "time": 1794409221000
+   }
+  ],
+  "fundingInfo": [
+   {
+    "symbol": "SOLUSDT",
+    "adjustedFundingRateCap": "0.02000000",
+    "adjustedFundingRateFloor": "-0.02000000",
+    "fundingIntervalHours": 4,
+    "disclaimer": false
+   }
+  ]
+ }
+}

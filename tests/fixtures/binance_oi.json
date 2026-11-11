@@ -1,0 +1,35 @@
+{
+ "exchange": "binance",
+ "kind": "oi",
+ "fetched_at_ms": 1794409225000,
+ "responses": {
+  "openInterest": {
+   "BTCUSDT": {
+    "openInterest": "80512.345",
+    "symbol": "BTCUSDT",
+    "time": 1794409222000
+   },
+   "ETHUSDT": {
+    "openInterest": "1905000.120",
+    "symbol": "ETHUSDT",
+    "time": 1794409222000
+   }
+  },
+  "premiumIndex": [
+   {
+    "symbol": "BTCUSDT",
+    "markPrice": "102410.10000000",
+    "lastFundingRate": "0.0001",
+    "nextFundingTime": 1794412800000,
+    "time": 1794409200000
+   },
+   {
+    "symbol": "ETHUSDT",
+    "markPrice": "3860.25000000",
+    "lastFundingRate": "0.0001",
+    "nextFundingTime": 1794412800000,
+    "time": 1794409200000
+   }
+  ]
+ }
+}
